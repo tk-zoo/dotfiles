@@ -8,6 +8,11 @@ fi
 # Set zsh
 chsh -s /bin/zsh
 
+# Install Rosetta 2 for Apple Silicon
+if [ "$(uname -m)" = "arm64" ] ; then
+  /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+fi
+
 # Install xcode
 xcode-select --install > /dev/null
 
