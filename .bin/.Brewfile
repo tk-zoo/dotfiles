@@ -42,7 +42,7 @@ cask "suspicious-package" # QuickLook Plug-in
 cask "teamviewer"
 cask "utm" # 仮想マシン
 cask "visual-studio-code"
-casl "webex"
+cask "webex"
 cask "wireshark"
 # cask "zoom"
 
