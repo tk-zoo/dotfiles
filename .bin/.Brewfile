@@ -1,6 +1,6 @@
 cask_args appdir: '/Applications'
 tap "homebrew/bundle"
-tap 'caskroom/cask'
+#tap 'caskroom/cask'
 
 ### CUI Tool
 brew "ffmpeg"
@@ -21,7 +21,7 @@ cask "clipy"
 cask "crystalfetch" # UTMのWindowsOSイメージ作成
 cask "firefox"
 cask "grandperspective" # グラフィカルな空き容量調査
-# cask "google-chrome"
+# cask "google-chrome" # Rehabでは自動キッティングでインストールするのでコメントアウト
 cask "google-drive"
 cask "google-japanese-ime"
 cask "istat-menus"
@@ -36,7 +36,7 @@ cask "powershell"
 cask "pppc-utility" # Jamfで使用
 cask "qlcolorcode" # QuickLook Plug-in
 cask "rectangle" # ウィンドウ配置
-# cask "slack"
+# cask "slack" # Rehabでは自動キッティングでインストールするのでコメントアウト
 # cask "sourcetree"
 cask "suspicious-package" # QuickLook Plug-in
 cask "teamviewer"
@@ -44,7 +44,7 @@ cask "utm" # 仮想マシン
 cask "visual-studio-code"
 cask "webex"
 cask "wireshark"
-# cask "zoom"
+# cask "zoom" # Rehabでは自動キッティングでインストールするのでコメントアウト
 
 ### MacAppStore
 mas "Keynote", id: 409183694
