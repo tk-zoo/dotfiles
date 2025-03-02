@@ -86,10 +86,10 @@ sudo chflags nohidden /Volumes
 # Don't remember passwords （パスワードを自動入力・記録しない）
 # defaults write com.apple.Safari AutoFillPasswords -bool false
 # 検索クエリをAppleへ送信しない
-defaults write com.apple.Safari UniversalSearchEnabled -bool false
-defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+# defaults write com.apple.Safari UniversalSearchEnabled -bool false
+# defaults write com.apple.Safari SuppressSearchSuggestions -bool true
 # ファイルのダウンロード後に自動でファイルを開くのを無効化
-defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+# defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 
 
 ### Trackpad ###
@@ -105,7 +105,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad showLaunchpadG
 
 ### Others ###
 # 自動大文字の無効化
-$ defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 
 
 for app in "Dock" \
