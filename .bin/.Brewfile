@@ -9,6 +9,7 @@ brew "tree"
 brew "watch"
 brew "wget"
 brew "mas" # MacAppStore管理
+brew "dockutil" # dockを操作する
 
 ### GUI Tool
 cask "1password"

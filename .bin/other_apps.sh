@@ -37,3 +37,19 @@
 
 # # Logi Options+
 # app_dl_curl "Logi Options+" https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip
+
+### 以下は手動対応
+### システム環境設定
+#- TouchID
+#	- 右人差し指・右中指・左人差し指を登録
+#	- すべてのTouchID利用をオン
+### Finder
+#- サイドバー
+#	- 最近の項目	Off
+#	- Home	On
+#- ウインドウ
+#	- リストカラムに追加日を追加
+#- プリンタ
+#	- オフィス（物理）
+#	- オフィス（WeWork）
+#	- 自宅

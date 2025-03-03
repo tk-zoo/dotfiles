@@ -22,5 +22,3 @@ if [ "$(uname -m)" = "arm64" ] ; then
   (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/${USER}/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
-
-source ~/.zprofile

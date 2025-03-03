@@ -11,6 +11,9 @@ fi
 defaults write com.apple.dock persistent-apps -array
 # Set the icon size （アイコンサイズの設定）
 defaults write com.apple.dock tilesize -int 36
+# 最近使ったアプリを非表示
+defaults write com.apple.dock show-recents -bool false
+
 
 ### Misson Control ###
 ### Possible values:
@@ -36,6 +39,8 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 # Top right screen corner → Desktop （右下 → 無し）
 defaults write com.apple.dock wvous-br-corner -int 0
 defaults write com.apple.dock wvous-br-modifier -int 0
+# 最新の使用状況に基づいて操作スペースを自動的に並べ替えるを無効
+defaults write com.apple.dock mru-spaces -bool false
 
 
 ### Finder ###
@@ -61,19 +66,12 @@ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
-# Automatically open a new Finder window when a volume is mounted
-# マウントされたディスクがあったら、自動的に新しいウィンドウを開く
+# Automatically open a new Finder window when a volume is mounted　（マウントされたディスクがあったら、自動的に新しいウィンドウを開く）
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
-# Automatically quit the printer app once the print jobs are completed
-# 印刷が終了したら、自動的にプリンターアプリを終了する
+# Automatically quit the printer app once the print jobs are completed （印刷が終了したら、自動的にプリンターアプリを終了する）
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
-# Save screenshots as PNGs （スクリーンショット保存形式をPNGにする）
-defaults write com.apple.screencapture type -string "png"
-# Require password immediately after the computer went into sleep or screen saver mode （スリープまたはスクリーンセーバから復帰した際、パスワードをすぐに要求する）
-# defaults write com.apple.screensaver askForPassword -int 1
-# defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Show the ~/Library directory（ライブラリディレクトリを表示、デフォルトは非表示）
 chflags nohidden ~/Library
 # Show the /Volumes folder
@@ -103,11 +101,41 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCorner
 # Launchpadジェスチャを無効
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad showLaunchpadGestureEnabled -int 0
 
+
+### アクセシビリティ ###
+# キーボードショートカットを使って拡大縮小
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 15 "<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>65535</integer><integer>49</integer><integer>393216</integer></array><key>type</key><string>standard</string></dict></dict>"
+# ズームイン
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 17 "<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>61</integer><integer>24</integer><integer>1572864</integer></array><key>type</key><string>standard</string></dict></dict>"
+# ズームアウト
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 19 "<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>45</integer><integer>27</integer><integer>1572864</integer></array><key>type</key><string>standard</string></dict></dict>"
+
+
+### キーボードショートカット ###
+# 前の入力ソースを選択（コマンド+スペース）
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 "<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>32</integer><integer>49</integer><integer>1048576</integer></array><key>type</key><string>standard</string></dict></dict>"
+# Spotlight検索を表示（コントロール+スペース）
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>65535</integer><integer>49</integer><integer>262144</integer></array><key>type</key><string>standard</string></dict></dict>"
+
+
 ### Others ###
 # 自動大文字の無効化
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+# スクリーンショットをPNG形式で保存
+defaults write com.apple.screencapture type -string "png"
+# スクリーンショットのファイル名prefixを指定する
+defaults write com.apple.screencapture name ss
+# スクリーンショットの保存先を指定する
+defaults write com.apple.screencapture location ~/Documents/ss
+# ファイル共有を有効にする
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.smbd.plist
+# スクリーンセーバーをFlurryにする
+defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string "Flurry" path -string "/System/Library/Screen Savers/Flurry.saver" type -int 0
 
 
+### 設定適用のおまじない
+/System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+### Dock、Finder、SystemUIServerの再起動
 for app in "Dock" \
 	"Finder" \
 	"SystemUIServer"; do
