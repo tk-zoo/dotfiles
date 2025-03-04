@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+source ~/.zprofile
+
 # Check operating system
 if [ "$(uname)" != "Darwin" ] ; then
 	echo "Not macOS!"
