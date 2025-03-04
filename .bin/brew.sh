@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-source ~/.zprofile
-
 # Check operating system
 if [ "$(uname)" != "Darwin" ] ; then
 	echo "Not macOS!"
@@ -32,8 +30,8 @@ function login_check {
 
 open_app_store
 if login_check "Did you login?"; then
-  brew bundle --global
+  brew bundle --global --verbose
+  # シェルの再読み込み
+  source ~/.zprofile
 fi
 
-# シェルの再読み込み
-source ~/.zprofile

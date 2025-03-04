@@ -58,7 +58,12 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Disable live conversion（ライブ変換を無効化する）
 defaults write com.apple.inputmethod.Kotoeri JIMPrefLiveConversionKey -bool false
 # Display date, day, and time in the menu bar（メニューの時計を24時間・時分秒・曜日表記にする）
-defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm:ss\""
+# defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm:ss\"" <ぐぐると出てくるけど、効かない
+defaults write com.apple.menuextra.clock FlashDateSeparators  -bool true
+defaults write com.apple.menuextra.clock Show24Hour  -bool true
+defaults write com.apple.menuextra.clock ShowDayOfWeek  -bool true
+defaults write com.apple.menuextra.clock ShowSeconds  -bool true
+
 # Show files with all extensions （すべての拡張子を表示する）
 defaults write -g AppleShowAllExtensions -bool true
 # Show icons for hard drives, servers, and removable media on the desktop（ハードドライブ・サーバー・リムーバブルメディアを表示する）
@@ -99,7 +104,8 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -int 1
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 0
 # Launchpadジェスチャを無効
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad showLaunchpadGestureEnabled -int 0
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad showLaunchpadGestureEnabled -int 0 <ぐぐると出てくるけど、効かない
+defaults write com.apple.dock showLaunchpadGestureEnabled -bool false
 
 
 ### アクセシビリティ ###
@@ -131,8 +137,9 @@ defaults write com.apple.screencapture location ~/Documents/ss
 # ファイル共有を有効にする
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.smbd.plist
 # スクリーンセーバーをFlurryにする
-defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string "Flurry" path -string "/System/Library/Screen Savers/Flurry.saver" type -int 0
-
+# defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName "Flurry" path "/System/Library/Screen Savers/Flurry.saver" type 0
+# スクリーンセーバーをメッセージにする
+defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName "Computer Name" path "/System/Library/Frameworks/ScreenSaver.framework/PlugIns/Computer Name.appex" type 0
 
 ### 設定適用のおまじない
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u

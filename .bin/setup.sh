@@ -5,7 +5,11 @@
 
 # Google日本語入力の設定（辞書等）にシンボリックを張る（iCloudから）
 # mv ~/Library/Application\ Support/Google/JapaneseInput ~/Library/Application\ Support/Google/JapaneseInput_org
-ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/JapaneseInput ~/Library/Application\ Support/Google/
+mkdir ~/Library/Application\ Support/Google/
+ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/JapaneseInput ~/Library/Application\ Support/Google
+
+# visual studio codeのコマンド用にPathを通す
+echo; echo 'export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"' >> /Users/${USER}/.zprofile
 
 # sudoでTouchIDを使えるようにする
 sed -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local
