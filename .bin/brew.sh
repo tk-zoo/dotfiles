@@ -9,9 +9,10 @@ if [ "$(uname)" != "Darwin" ] ; then
 fi
 
 function open_app_store {
-  echo "Please login with your Apple ID"
+  echo "Please login with your Apple ID & iCloud"
   sleep 1; echo "Open the App Store."
   sleep 1; open -a App\ Store
+  sleep 1; open -b com.apple.systempreferences
 }
 
 function login_check {
@@ -33,3 +34,6 @@ open_app_store
 if login_check "Did you login?"; then
   brew bundle --global
 fi
+
+# シェルの再読み込み
+source ~/.zprofile

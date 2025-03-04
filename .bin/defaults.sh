@@ -50,7 +50,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 # Show status bar in Finder（ステータスバーを表示）
 defaults write com.apple.finder ShowStatusBar -bool true
 # Show hidden files in Finder（隠しファイルを表示する）
-defaults write com.apple.finder AppleShowAllFiles -bool true
+# defaults write com.apple.finder AppleShowAllFiles -bool true
 # Avoid creating `.DS_Store` files on network volumes （ネットワークドライブで.DS_Storeを作らない）
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # USBストレージに.DS_Storeファイルを作成しない
@@ -126,6 +126,7 @@ defaults write com.apple.screencapture type -string "png"
 # スクリーンショットのファイル名prefixを指定する
 defaults write com.apple.screencapture name ss
 # スクリーンショットの保存先を指定する
+mkdir ~/Documents/ss
 defaults write com.apple.screencapture location ~/Documents/ss
 # ファイル共有を有効にする
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.smbd.plist
