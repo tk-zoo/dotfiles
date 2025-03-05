@@ -1,4 +1,5 @@
 #!/bin/bash
+source ~/.zprofile
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 VSCODE_SETTING_PATH="${HOME}/Library/Application Support/Code/User/settings.json"
