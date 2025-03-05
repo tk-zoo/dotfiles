@@ -5,11 +5,11 @@ VSCODE_SETTING_PATH="${HOME}/Library/Application\ Support/Code/User/settings.jso
 
 if [[ ! -L "${VSCODE_SETTING_PATH}" ]]; then
   echo "Linking settings.json to vscode..."
-  ln -fsvn "${SCRIPT_DIR}/settings.json" "${VSCODE_SETTING_PATH}" || {
+  ln -fsvn "${VSCODE_SETTING_PATH}" "${SCRIPT_DIR}/settings.json" || {
     echo "Error creating symbolic link." >&2
     exit 1
   }
-  echo "Symbolic link created: ${VSCODE_SETTING_PATH} -> ${SCRIPT_DIR}/settings.json"
+  echo "Symbolic link created: ${SCRIPT_DIR}/settings.json" -> ${VSCODE_SETTING_PATH}
 else
   echo "VSCode settings.json link already exists."
 fi
