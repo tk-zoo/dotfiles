@@ -38,9 +38,9 @@ setup:
 
 # Setup Visual Studio Code
 vscode:
-	@chmod +x .bin/.vscode/vscode.sh
+	@chmod +x .vscode/vscode.sh
 	@echo "\033[0;34mRun vscode.sh\033[0m"
-	@.bin/.vscode/vscode.sh
+	@.vscode/vscode.sh
 	@echo "\033[0;32mDone.\033[0m"
 
 # Setup Other apps

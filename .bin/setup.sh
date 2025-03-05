@@ -8,21 +8,21 @@
 mkdir ~/Library/Application\ Support/Google/
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/JapaneseInput ~/Library/Application\ Support/Google
 
-# visual studio codeのコマンド用にPathを通す
-# 追加するパス
-VSCODE_PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-# ~/.zprofile にすでにパスが含まれているかチェック
-if ! grep -q "$VSCODE_PATH" ~/.zprofile; then
-    echo "Adding Visual Studio Code to PATH..."
-    cat <<EOF >> ~/.zprofile
-# Add Visual Studio Code (code) to PATH
-export PATH="\$PATH:$VSCODE_PATH"
-EOF
-else
-    echo "Visual Studio Code path is already set."
-fi
-# 設定を即時反映
-source ~/.zprofile
+### visual studio codeのコマンド用にPathを通す
+## 追加するパス
+#VSCODE_PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+## ~/.zprofile にすでにパスが含まれているかチェック
+#if ! grep -q "$VSCODE_PATH" ~/.zprofile; then
+#    echo "Adding Visual Studio Code to PATH..."
+#    cat <<EOF >> ~/.zprofile
+## Add Visual Studio Code (code) to PATH
+#export PATH="\$PATH:$VSCODE_PATH"
+#EOF
+#else
+#    echo "Visual Studio Code path is already set."
+#fi
+## 設定を即時反映
+#source ~/.zprofile
 
 
 # sudoでTouchIDを使えるようにする
