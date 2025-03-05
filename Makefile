@@ -1,5 +1,5 @@
 # Do everything.
-all: init link defaults brew setup other_apps
+all: init link defaults brew setup vscode other_apps
 
 # Set initial preference.
 init:
@@ -34,6 +34,13 @@ setup:
 	@chmod +x .bin/setup.sh
 	@echo "\033[0;34mRun setup.sh\033[0m"
 	@.bin/setup.sh
+	@echo "\033[0;32mDone.\033[0m"
+
+# Setup Visual Studio Code
+vscode:
+	@chmod +x .bin/.vscode/vscode.sh
+	@echo "\033[0;34mRun vscode.sh\033[0m"
+	@.bin/.vscode/vscode.sh
 	@echo "\033[0;32mDone.\033[0m"
 
 # Setup Other apps

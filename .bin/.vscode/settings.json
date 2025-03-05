@@ -1,0 +1,9 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.insertSpaces": false,
+    "diffEditor.renderSideBySide": true,
+    "git.autofetch": true,
+    "githubPullRequests.createOnPublishBranch": "never",
+    "makefile.configureOnOpen": true,
+    "git.ignoreRebaseWarning": true
+}
