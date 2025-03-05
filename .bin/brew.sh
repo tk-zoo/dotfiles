@@ -32,7 +32,7 @@ function login_check {
 
 open_app_store
 if login_check "Did you login?"; then
-  brew bundle --global --verbose
+  brew bundle --global ##--verbose
   # シェルの再読み込み
   source ~/.zprofile
 fi
