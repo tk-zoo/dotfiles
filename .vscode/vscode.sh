@@ -1,11 +1,11 @@
 #!/bin/bash
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
-VSCODE_SETTING_PATH="${HOME}/Library/Application\ Support/Code/User/settings.json"
+VSCODE_SETTING_PATH="${HOME}/Library/Application Support/Code/User/settings.json"
 
 if [[ ! -L "${VSCODE_SETTING_PATH}" ]]; then
   echo "Linking settings.json to vscode..."
-  ln -fsvn ${SCRIPT_DIR}/settings.json ${VSCODE_SETTING_PATH} || {
+  ln -fsvn "${SCRIPT_DIR}/settings.json" "${VSCODE_SETTING_PATH}" || {
     echo "Error creating symbolic link." >&2
     exit 1
   }
