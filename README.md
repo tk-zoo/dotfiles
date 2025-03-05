@@ -4,6 +4,7 @@
 	sudo visudo
 	一番下に、
 	user名	ALL = (ALL) NOPASSWD: ALLを追記
+3. TouchIDを登録する
 
 ## 実施
 1. リポジトリを新しいMacにZipダウンロードする
@@ -13,13 +14,14 @@
 	- chmod +x .bin/*.sh
 4. dotfile/でmakeする
 	- 初めてだと、xcode developer toolのインストールを求められるので、インストール後に再度makeする
-	- make allで、init.sh　brew.sh　defaults.sh　setup.sh　other_apps.shが順次実行される
+	- make allで、init.sh　brew.sh　defaults.sh　setup.sh vscode.sh　other_apps.shが順次実行される
 	- 以下で個別実行が可能
 		- make init
 		- make link
 		- make brew
 		- make defaults
 		- make setup
+		- make vscode
 		- make other_apps
 	
 
@@ -28,6 +30,7 @@
 - brew・・・Brewfileに書いたコマンド・アプリをインストールする
 - defaults・・・Macのdefaultsコマンドでシステム設定をする
 - setup・・・コマンド・アプリの設定をする
+- vscode・・・Visual Studio Codeの設定をする
 - other_apps・・・上記で入らないコマンド・アプリをダウンロードしたりwebを開いたりする
 
 ## 後始末
@@ -37,9 +40,6 @@
 	user名	ALL = (ALL) NOPASSWD: ALLを削除
 2. 以下は手動対応
 	- システム環境設定
-		- TouchID
-			- 右人差し指・右中指・左人差し指を登録
-			- すべてのTouchID利用をオン
 		- デスクトップとDock
 			-　壁紙をクリックしてデスクトップを表示＞ステージマネージャ使用時のみ
 	- Finder
