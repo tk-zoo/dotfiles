@@ -25,7 +25,7 @@ cask "grandperspective" # グラフィカルな空き容量調査
 # cask "google-chrome" # Rehabでは自動キッティングでインストールするのでコメントアウト
 cask "google-drive"
 cask "google-japanese-ime"
-cask "istat-menus"
+cask "istat-menus@6"
 cask "keeper-password-manager"
 cask "keka" # zip圧縮
 cask "mactracker"
