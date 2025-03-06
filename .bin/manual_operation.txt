@@ -13,7 +13,13 @@
 	- オフィス（物理）
 	- オフィス（WeWork）
 	- 自宅
+- vscode
+	- syncのためログイン
+	- dotfilesの同期
+	- 他のリポジトリのクローン
 - chrome機能拡張
+	- 同期のためログイン
+	
 	- 1password	https://chrome.google.com/webstore/detail/aapbdbdomjkkjkaonfhkkikfgjllcleb
 	- Authenticator	https://chromewebstore.google.com/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai
 	- Checker Plus for Gmail	https://chromewebstore.google.com/detail/checker-plus-for-gmail/oeopbcgkkoapgobdbedcemjljbihmemj

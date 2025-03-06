@@ -37,11 +37,11 @@ setup:
 	@echo "\033[0;32mDone.\033[0m"
 
 # Setup Visual Studio Code
-vscode:
-	@chmod +x .vscode/vscode.sh
-	@echo "\033[0;34mRun vscode.sh\033[0m"
-	@.vscode/vscode.sh
-	@echo "\033[0;32mDone.\033[0m"
+# vscode:
+#	@chmod +x vscode/vscode.sh
+#	@echo "\033[0;34mRun vscode.sh\033[0m"
+#	@vscode/vscode.sh
+#	@echo "\033[0;32mDone.\033[0m"
 
 # Setup Other apps
 other_apps:
