@@ -68,4 +68,9 @@
 	- scp -r -p ~/Downloads/* [user]@[newmac ip]:~/Downloads/
 	- scp -r -p ~/Documents/* [user]@[newmac ip]:~/Documents/
 	#念の為バックアップしとく
-	- scp -r -p ~/Library/* [user]@[newmac ip]:~/Documents/Backup/Old_mac_Library/
+	- scp -r -p ~/Library/Application\ Support [user]@[newmac ip]:~/Documents/Backup/Old_mac_Library/
+	- scp -r -p ~/Library/Fonts [user]@[newmac ip]:~/Documents/Backup/Old_mac_Library/
+	- scp -r -p ~/Library/Keychains [user]@[newmac ip]:~/Documents/Backup/Old_mac_Library/
+	- scp -r -p ~/Library/Preferences [user]@[newmac ip]:~/Documents/Backup/Old_mac_Library/
+	- scp -r -p ~/Library/Safari [user]@[newmac ip]:~/Documents/Backup/Old_mac_Library/
+	
