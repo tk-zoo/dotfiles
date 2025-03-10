@@ -28,6 +28,8 @@
 			- uBlock Origin Lite 最適
 		- keeper 
 			- ログイン
+	- 既存タブを移行
+		- 各ウインドウですべてのタブをブックマークに追加＞動機で新端末に＞個々に開く
 - Slack Apps
 	- スペーススイッチャーオン　command+shift+S
 	- 各ワークスペースへログイン
@@ -73,4 +75,10 @@
 	- scp -r -p ~/Library/Keychains [user]@[newmac ip]:~/Documents/Backup/Old_mac_Library/
 	- scp -r -p ~/Library/Preferences [user]@[newmac ip]:~/Documents/Backup/Old_mac_Library/
 	- scp -r -p ~/Library/Safari [user]@[newmac ip]:~/Documents/Backup/Old_mac_Library/
-	
+
+これでどう
+
+
+
+
+？
