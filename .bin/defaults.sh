@@ -140,6 +140,10 @@ sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.smbd.plist
 # defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName "Flurry" path "/System/Library/Screen Savers/Flurry.saver" type 0
 # スクリーンセーバーをメッセージにする
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName "Computer Name" path "/System/Library/Frameworks/ScreenSaver.framework/PlugIns/Computer Name.appex" type 0
+# メニューバーのアイコンを詰める（再起動・再ログイン後に反映）
+defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 6
+defaults -currentHost write -globalDomain NSStatusItemSpacing -int 6
+
 
 ### 設定適用のおまじない
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
