@@ -10,6 +10,8 @@ brew "watch"
 brew "wget"
 brew "mas" # MacAppStore管理
 brew "dockutil" # dockを操作する
+brew "npm"
+brew "node"
 
 ### GUI Tool
 cask "1password"
