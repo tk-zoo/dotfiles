@@ -12,23 +12,21 @@
 3. git clone https://github.com/tk-zoo/dotfiles.git
 	a. xcode developer toolのインストールを求められるので、インストール後に再度実行する
 4. dotfile/でmakeする
-	- make allで、init.sh　brew.sh　defaults.sh　setup.sh vscode.sh　other_apps.shが順次実行される
+	- make allで、init.sh　defaults.sh　brew.sh　setup.sh　other_apps.shが順次実行される
 	- 以下で個別実行が可能
 		- make init
 		- make link
-		- make brew
 		- make defaults
+		- make brew
 		- make setup
-		- make vscode
 		- make other_apps
 	
 
 - init・・・初期設定
 - link・・・dotfilesをホームディレクトリにシンボリック張る
-- brew・・・Brewfileに書いたコマンド・アプリをインストールする
 - defaults・・・Macのdefaultsコマンドでシステム設定をする
+- brew・・・Brewfileに書いたコマンド・アプリをインストールする
 - setup・・・コマンド・アプリの設定をする
-- vscode・・・Visual Studio Codeの設定をする
 - other_apps・・・上記で入らないコマンド・アプリをダウンロードしたりwebを開いたりする
 
 ## 後始末
