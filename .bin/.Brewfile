@@ -27,7 +27,7 @@ cask "grandperspective" # グラフィカルな空き容量調査
 # cask "google-chrome" # Rehabでは自動キッティングでインストールするのでコメントアウト
 cask "google-drive"
 cask "google-japanese-ime"
-cask "istat-menus@6"
+# cask "istat-menus@6"
 cask "keeper-password-manager"
 cask "keka" # zip圧縮
 cask "mactracker"
@@ -57,10 +57,11 @@ mas "Pages", id: 409201541
 mas "iMovie", id: 408981434
 mas "Apple Configurator", id: 1037126344
 
-mas "Affinity Photo", id: 824183456
-mas "Affinity Designer", id: 824171161
+# mas "Affinity Photo", id: 824183456 ###旧バージョンのためmasで落とせない
+# mas "Affinity Designer", id: 824171161 ###旧バージョンのためmasで落とせない
 mas "Brother P-touch Editor", id: 1453365242
 mas "RunCat", id: 1429033973
+# mas "iStatements", id: 1319778037 ###旧バージョンのためmasで落とせない
 
 ### Safari Extension
 mas "1Password for Safari", id: 1569813296

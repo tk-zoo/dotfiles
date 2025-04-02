@@ -36,8 +36,8 @@
 # JamfPro
  app_dl_web "JamfPro" https://account.jamf.com/
 
-# WeWork Printer
- app_dl_curl "WeWork Printer" https://it-assets.s3.amazonaws.com/printing/We_Work_Installer.zip
+# WeWork Printer (公式から入れないと動かない)
+# app_dl_curl "WeWork Printer" https://it-assets.s3.amazonaws.com/printing/We_Work_Installer.zip
 
 # # Logi Options+
 # app_dl_curl "Logi Options+" https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip
